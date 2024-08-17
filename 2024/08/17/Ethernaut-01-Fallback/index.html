@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="一、部署合约点击创建新示例按钮部署合约。 二、审题题目完成的两个条件为：  获得合约所有权 合约余额为0  查看当前合约的所有权：contract.owner() 查看当前玩家地址：player  三、阅读源码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+    <meta name="description" content="Ethernaut-01-Fallback一、部署合约点击创建新示例按钮部署合约。 二、审题题目完成的两个条件为：  获得合约所有权 合约余额为0  查看当前合约的所有权：contract.owner() 查看当前玩家地址：player  三、阅读源码12345678910111213141516171819202122232425262728293031323334353637383940414">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ethernaut-01 Fallback">
+<meta property="og:title" content="Ethernaut-01-Fallback">
 <meta property="og:url" content="http://example.com/2024/08/17/Ethernaut-01-Fallback/index.html">
 <meta property="og:site_name" content="辞寒-个人博客">
-<meta property="og:description" content="一、部署合约点击创建新示例按钮部署合约。 二、审题题目完成的两个条件为：  获得合约所有权 合约余额为0  查看当前合约的所有权：contract.owner() 查看当前玩家地址：player  三、阅读源码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+<meta property="og:description" content="Ethernaut-01-Fallback一、部署合约点击创建新示例按钮部署合约。 二、审题题目完成的两个条件为：  获得合约所有权 合约余额为0  查看当前合约的所有权：contract.owner() 查看当前玩家地址：player  三、阅读源码12345678910111213141516171819202122232425262728293031323334353637383940414">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2024/08/17/Ethernaut-01-Fallback/image-20240817115551167.png">
 <meta property="og:image" content="http://example.com/2024/08/17/Ethernaut-01-Fallback/image-20240817125456823.png">
@@ -34,8 +34,8 @@
 <meta property="og:image" content="http://example.com/2024/08/17/Ethernaut-01-Fallback/image-20240817134734139.png">
 <meta property="og:image" content="http://example.com/2024/08/17/Ethernaut-01-Fallback/image-20240817135631940.png">
 <meta property="og:image" content="http://example.com/2024/08/17/Ethernaut-01-Fallback/image-20240817140026795.png">
-<meta property="article:published_time" content="2024-08-17T06:37:19.000Z">
-<meta property="article:modified_time" content="2024-08-17T08:14:38.723Z">
+<meta property="article:published_time" content="2024-08-17T06:41:50.000Z">
+<meta property="article:modified_time" content="2024-08-17T14:57:16.692Z">
 <meta property="article:author" content="辞寒">
 <meta property="article:tag" content="Web3-CTFs">
 <meta name="twitter:card" content="summary">
@@ -46,10 +46,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/08/17/Ethernaut-01-Fallback/","path":"2024/08/17/Ethernaut-01-Fallback/","title":"Ethernaut-01 Fallback"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/08/17/Ethernaut-01-Fallback/","path":"2024/08/17/Ethernaut-01-Fallback/","title":"Ethernaut-01-Fallback"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Ethernaut-01 Fallback | 辞寒-个人博客</title>
+<title>Ethernaut-01-Fallback | 辞寒-个人博客</title>
   
 
 
@@ -121,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%83%A8%E7%BD%B2%E5%90%88%E7%BA%A6"><span class="nav-text">一、部署合约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%A1%E9%A2%98"><span class="nav-text">二、审题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%98%85%E8%AF%BB%E6%BA%90%E7%A0%81"><span class="nav-text">三、阅读源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="nav-text">四、解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%A7%A3%E9%A2%98%E6%AD%A5%E9%AA%A4"><span class="nav-text">五、解题步骤</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ethernaut-01-Fallback"><span class="nav-text">Ethernaut-01-Fallback</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%83%A8%E7%BD%B2%E5%90%88%E7%BA%A6"><span class="nav-text">一、部署合约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%A1%E9%A2%98"><span class="nav-text">二、审题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%98%85%E8%AF%BB%E6%BA%90%E7%A0%81"><span class="nav-text">三、阅读源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="nav-text">四、解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%A7%A3%E9%A2%98%E6%AD%A5%E9%AA%A4"><span class="nav-text">五、解题步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-text">六、知识点</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -185,12 +185,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Ethernaut-01 Fallback | 辞寒-个人博客">
+      <meta itemprop="name" content="Ethernaut-01-Fallback | 辞寒-个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Ethernaut-01 Fallback
+          Ethernaut-01-Fallback
         </h1>
 
         <div class="post-meta-container">
@@ -202,7 +202,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-08-17 14:37:19 / 修改时间：16:14:38" itemprop="dateCreated datePublished" datetime="2024-08-17T14:37:19+08:00">2024-08-17</time>
+      <time title="创建时间：2024-08-17 14:41:50 / 修改时间：22:57:16" itemprop="dateCreated datePublished" datetime="2024-08-17T14:41:50+08:00">2024-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -230,7 +230,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="一、部署合约"><a href="#一、部署合约" class="headerlink" title="一、部署合约"></a>一、部署合约</h3><p>点击创建新示例按钮部署合约。</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="Ethernaut-01-Fallback"><a href="#Ethernaut-01-Fallback" class="headerlink" title="Ethernaut-01-Fallback"></a>Ethernaut-01-Fallback</h2><h3 id="一、部署合约"><a href="#一、部署合约" class="headerlink" title="一、部署合约"></a>一、部署合约</h3><p>点击创建新示例按钮部署合约。</p>
 <h3 id="二、审题"><a href="#二、审题" class="headerlink" title="二、审题"></a>二、审题</h3><p>题目完成的两个条件为：</p>
 <ul>
 <li>获得合约所有权</li>
@@ -285,6 +285,9 @@
 <p><img src="/2024/08/17/Ethernaut-01-Fallback/image-20240817135631940.png" alt="image-20240817135631940"></p>
 <p>5、任务完成，提交实例</p>
 <p><img src="/2024/08/17/Ethernaut-01-Fallback/image-20240817140026795.png" alt="image-20240817140026795"></p>
+<h3 id="六、知识点"><a href="#六、知识点" class="headerlink" title="六、知识点"></a>六、知识点</h3><ul>
+<li><code>receive()</code>函数和<code>fallback()</code>函数</li>
+</ul>
 
     </div>
 
